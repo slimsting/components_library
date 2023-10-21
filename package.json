@@ -1,0 +1,22 @@
+{
+  "devDependencies": {
+    "gh-pages": "^6.0.0",
+    "prettier-plugin-tailwindcss": "^0.5.6"
+  },
+  "dependencies": {
+    "react-icons": "^4.11.0"
+  },
+  "name": "scrimba-quizzical-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": "https://slimsting.github.io/<YOUR-REPOSITORY-NAME>/",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+}
