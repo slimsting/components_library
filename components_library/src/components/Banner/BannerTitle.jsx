@@ -11,22 +11,23 @@ const BannerTitle = ({ children }) => {
   let icon = null;
   switch (type) {
     case "success":
-      allClasses = "text-xl text-green-800 flex gap-4 items-center";
+      allClasses = "text-2xl text-green-800 flex gap-4 items-center";
       icon = <FaCheckCircle className="text-green-600" />;
       break;
 
     case "warning":
-      allClasses = "text-xl text-yellow-800 flex gap-4 items-center";
+      allClasses =
+        "text-2xl text-yellow-800 flex gap-4 items-center";
       icon = <AiFillWarning className="text-yellow-600" />;
       break;
 
     case "error":
-      allClasses = "text-xl text-red-800 flex gap-4 items-center";
+      allClasses = "text-2xl text-red-800 flex gap-4 items-center";
       icon = <VscError className="text-red-600" />;
       break;
 
     case "neutral":
-      allClasses = "text-xl text-blue-800 flex gap-4 items-center";
+      allClasses = "text-2xl text-blue-800 flex gap-4 items-center";
       icon = <BsInfoCircle className="text-blue-600" />;
       break;
   }

@@ -1,21 +1,13 @@
 import Badge from "./components/Badge/Badge";
-import BannerText from "./components/Banner/BannerText";
-import BannerTitle from "./components/Banner/BannerTitle";
-import { IoLibraryOutline } from "react-icons/io5";
-import { FaQuoteLeft } from "react-icons/fa";
 import Banner from "./components/Banner/index";
 import Testimonial from "./components/Testimonial/Index";
-import TestimonialImage from "./components/Testimonial/TestimonialImage";
-import TestimonialText from "./components/Testimonial/TestimonialText";
-import TestimonialName from "./components/Testimonial/TestimonialName";
-import { VscTextSize } from "react-icons/vsc";
-import TestimonialTitle from "./components/Testimonial/TestimonialTitle";
+import { IoLibraryOutline } from "react-icons/io5";
 
 const App = () => {
   return (
-    <div className="max-w-[1280px] mx-auto">
+    <div className="max-w-[1280px] mx-auto bg-slate-50 min-w-[480px]">
       <header className="">
-        <nav className="flex p-2 items-center content-center min-w-[360px]  mx-auto gap-4 bg-lime-300 ">
+        <nav className="flex p-2 items-center content-center min-w-[360px]  mx-auto gap-4 bg-lime-300 shadow-md ">
           <IoLibraryOutline className="text-6xl firstB:text-6xl" />
 
           <h1 className="font-bold text-2xl italic firstB:text-3xl">
@@ -24,17 +16,17 @@ const App = () => {
           </h1>
         </nav>
       </header>
-      <div className="flex flex-col mx-auto max-w-max min-w-[340px] fourthB:p-12 max-fourthB:flex fourthB:space-y-4">
-        <section className="fourthB:flex fourthB:space-x-12 fourthB:flex-col fourthB:mx-auto">
-          <h2 className="text-center font-bold text-6xl mt-4 fourthB:mr-6 fourthB:mt-0 ">
+      <div className="flex flex-col mx-auto min-w-[340px] fourthB:p-12 fourthB:flex fourthB:space-y-4">
+        <section className=" flex flex-col items-center content-center fourthB:flex fourthB:flex-col fourthB:mx-auto">
+          <h2 className="font-bold text-6xl mt-4 fourthB:mr-6 fourthB:mt-0 text-lime-900">
             Badges
           </h2>
-          <div className="border-b border-lime-400 bg-lime-50 fourthB:mt-4">
+          <div className="border-b fourthB:mt-4">
             <div className="flex flex-col items-center p-2 mt-4 my-8">
-              <h3 className="font-bold text-3xl mb-4 font-serif italic">
+              <h3 className=" font-bold text-3xl mb-4 font-serif text-lime-600 underline">
                 Square
               </h3>
-              <div className="rounded-md p-4 bg-lime-200 mx-12 grid firstB:grid-cols-2 secondB:grid-cols-3 thirdB:grid-cols-4 fourthB:grid-cols-5 ">
+              <div className="rounded-md p-4mx-12 grid firstB:grid-cols-2 secondB:grid-cols-3 thirdB:grid-cols-4 fourthB:grid-cols-5 ">
                 <Badge variant="square" color="gray">
                   Gray
                 </Badge>
@@ -62,10 +54,8 @@ const App = () => {
               </div>
             </div>
             <div className="flex flex-col items-center p-2 mt-4 my-8 ">
-              <h3 className="font-bold text-3xl mb-4 font-serif italic">
-                Pill
-              </h3>
-              <div className="rounded-md p-4 bg-lime-200 mx-12 grid firstB:grid-cols-2 secondB:grid-cols-3 thirdB:grid-cols-4 fourthB:grid-cols-5 ">
+              <h3 className="font-bold text-3xl font-serif">Pill</h3>
+              <div className="rounded-md p-4  mx-12 grid firstB:grid-cols-2 secondB:grid-cols-3 thirdB:grid-cols-4 fourthB:grid-cols-5 ">
                 <Badge variant="pill" color="gray">
                   Gray
                 </Badge>
@@ -94,111 +84,111 @@ const App = () => {
             </div>
           </div>
         </section>
-        <section className="fourthB:flex fourthB:space-x-12 fourthB:flex-col fourthB:mx-auto">
-          <h2 className="text-center font-bold text-6xl mt-4">Banners</h2>
-          <div className="border-b border-lime-400 bg-lime-50 mb-8 mt-4">
+        <section className="fourthB:flex  fourthB:flex-col fourthB:mx-auto">
+          <h2 className="text-center font-bold text-6xl mt-4 text-lime-900">
+            Banners
+          </h2>
+          <div className="border-b mt-4">
             <div className="flex flex-col items-center p-2 mt-4 my-8">
-              <h3 className="font-bold text-3xl mb-4 font-serif italic">
+              <h3 className="font-bold text-3xl font-serif text-lime-600 underline">
                 Multi-line
               </h3>
-              <div className="rounded-md p-4 bg-lime-200 mx-12 grid firstB:grid-cols-2 secondB:grid-cols-2 thirdB:grid-cols-1 fourthB:grid-cols-2">
+              <div className="rounded-md  mx-12 grid firstB:grid-cols-2 secondB:grid-cols-2 thirdB:grid-cols-1 fourthB:grid-cols-2">
                 <Banner type="success">
-                  <BannerTitle>Success</BannerTitle>
-                  <BannerText>
+                  <Banner.Title>Success</Banner.Title>
+                  <Banner.Text>
                     This is it, find it within you to give a flying banner
                     freedom
-                  </BannerText>
+                  </Banner.Text>
                 </Banner>
                 <Banner type="warning">
-                  <BannerTitle>Warning</BannerTitle>
-                  <BannerText>
+                  <Banner.Title>Warning</Banner.Title>
+                  <Banner.Text>
                     This is it, find it within you to give a flying banner
                     freedom
-                  </BannerText>
+                  </Banner.Text>
                 </Banner>
                 <Banner type="error">
-                  <BannerTitle>Error</BannerTitle>
-                  <BannerText>
+                  <Banner.Title>Error</Banner.Title>
+                  <Banner.Text>
                     This is it, find it within you to give a flying banner
                     freedom
-                  </BannerText>
+                  </Banner.Text>
                 </Banner>
                 <Banner type="neutral">
-                  <BannerTitle>Neutral</BannerTitle>
-                  <BannerText>
+                  <Banner.Title>Neutral</Banner.Title>
+                  <Banner.Text>
                     This is it, find it within you to give a flying banner
                     freedom
-                  </BannerText>
+                  </Banner.Text>
                 </Banner>
               </div>
             </div>
-            <div className="flex flex-col items-center p-2 mt-4 my-8 italic">
-              <h3 className="font-bold text-3xl mb-4 font-serif">
+            <div className="flex flex-col items-center p-2 mt-4 my-8">
+              <h3 className="font-bold text-3xl font-serif text-lime-600 underline ">
                 Single-line
               </h3>
-              <div className="rounded-md p-4 bg-lime-200 mx-12 grid firstB:grid-cols-2 secondB:grid-cols-3 thirdB:grid-cols-4">
+              <div className="rounded-md p-4 mx-12 grid firstB:grid-cols-2 secondB:grid-cols-3 thirdB:grid-cols-4">
                 <Banner type="success">
-                  <BannerTitle>Success</BannerTitle>
+                  <Banner.Title>Success</Banner.Title>
                 </Banner>
                 <Banner type="warning">
-                  <BannerTitle>Warning</BannerTitle>
+                  <Banner.Title>Warning</Banner.Title>
                 </Banner>
                 <Banner type="error">
-                  <BannerTitle>Error</BannerTitle>
+                  <Banner.Title>Error</Banner.Title>
                 </Banner>
                 <Banner type="neutral">
-                  <BannerTitle>Neutral</BannerTitle>
+                  <Banner.Title>Neutral</Banner.Title>
                 </Banner>
               </div>
             </div>
           </div>
         </section>
-        <section className="fourthB:flex fourthB:space-x-12 fourthB:flex-col fourthB:mx-auto">
-          <h2 className="text-center font-bold text-6xl ">Testimonials</h2>
-          <div className="grid border-b border-lime-400 bg-lime-50 mb-8 p-4 thirdB:grid-cols-2 mt-4">
+        <section className="fourthB:flex fourthB:flex-col ">
+          <h2 className="text-center font-bold text-6xl mt-4 text-lime-900">
+            Testimonials
+          </h2>
+          <div className="grid border-b mb-8 p-4 thirdB:grid-cols-2 mt-4 fourthB:m-8">
             <Testimonial>
-              <TestimonialImage>{"./images/one.jpg"}</TestimonialImage>
-              <TestimonialText>
+              <Testimonial.Image>{"./images/one.jpg"}</Testimonial.Image>
+              <Testimonial.Text>
                 There are many variations of passages of Lorem Ipsum available,
                 but the majority have suffered alteration in some form, by
-                injected humour, or randomised words which don't look even
-                slightly believable.
-              </TestimonialText>
-              <TestimonialName>Newbon Gadson</TestimonialName>
-              <TestimonialTitle>CEO unemployedGraduates</TestimonialTitle>
+                injected humour, or randomised words
+              </Testimonial.Text>
+              <Testimonial.Name>Newbon Gadson</Testimonial.Name>
+              <Testimonial.Title>CEO unemployedGraduates</Testimonial.Title>
             </Testimonial>
             <Testimonial>
-              <TestimonialImage>{"./images/two.jpg"}</TestimonialImage>
-              <TestimonialText>
+              <Testimonial.Image>{"./images/two.jpg"}</Testimonial.Image>
+              <Testimonial.Text>
                 There are many variations of passages of Lorem Ipsum available,
                 but the majority have suffered alteration in some form, by
-                injected humour, or randomised words which don't look even
-                slightly believable.
-              </TestimonialText>
-              <TestimonialName>Newbon Gadson</TestimonialName>
-              <TestimonialTitle>CEO unemployedGraduates</TestimonialTitle>
+                injected humour, or randomiseds
+              </Testimonial.Text>
+              <Testimonial.Name>Newbon Gadson</Testimonial.Name>
+              <Testimonial.Title>CEO unemployedGraduates</Testimonial.Title>
             </Testimonial>
             <Testimonial>
-              <TestimonialImage>{"./images/three.jpg"}</TestimonialImage>
-              <TestimonialText>
+              <Testimonial.Image>{"./images/three.jpg"}</Testimonial.Image>
+              <Testimonial.Text>
                 There are many variations of passages of Lorem Ipsum available,
                 but the majority have suffered alteration in some form, by
-                injected humour, or randomised words which don't look even
-                slightly believable.
-              </TestimonialText>
-              <TestimonialName>Newbon Gadson</TestimonialName>
-              <TestimonialTitle>CEO unemployedGraduates</TestimonialTitle>
+                injected humour,
+              </Testimonial.Text>
+              <Testimonial.Name>Newbon Gadson</Testimonial.Name>
+              <Testimonial.Title>CEO unemployedGraduates</Testimonial.Title>
             </Testimonial>
             <Testimonial>
-              <TestimonialImage>{"./images/four.jpg"}</TestimonialImage>
-              <TestimonialText>
+              <Testimonial.Image>{"./images/four.jpg"}</Testimonial.Image>
+              <Testimonial.Text>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
-              </TestimonialText>
-              <TestimonialName>Newbon Gadson</TestimonialName>
-              <TestimonialTitle>CEO unemployedGraduates</TestimonialTitle>
+                text ever since the 1500s,
+              </Testimonial.Text>
+              <Testimonial.Name>Newbon Gadson</Testimonial.Name>
+              <Testimonial.Title>CEO unemployedGraduates</Testimonial.Title>
             </Testimonial>
           </div>
         </section>

@@ -7,16 +7,16 @@ const Banner = ({ children, type }) => {
   let allClasses = null
   switch (type) {
     case "success":
-      allClasses = "bg-green-100 p-4 rounded-md mt-4 mx-4";
+      allClasses = "bg-green-100 p-4 rounded-md mt-10 mx-4 shadow-xl";
       break;
     case "warning":
-      allClasses = "bg-yellow-100 p-4 rounded-md mt-4 mx-4";
+      allClasses = "bg-yellow-100 p-4 rounded-md mt-10 mx-4 shadow-xl";
       break;
     case "error":
-      allClasses = "bg-red-100 p-4 rounded-md mt-4 mx-4";
+      allClasses = "bg-red-100 p-4 rounded-md mt-10 mx-4 shadow-xl";
       break;
     case "neutral":
-      allClasses = "bg-blue-100 p-4 rounded-md mt-4 mx-4";
+      allClasses = "bg-blue-100 p-4 rounded-md mt-10 mx-4 shadow-xl";
       break;
   }
   return (
